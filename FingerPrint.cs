@@ -296,12 +296,12 @@ namespace FingerPrint
             string strtbl = GetIniValue("TIMESPAN", "INIT", IniName).ToString().Trim();
 
             lbl_timer.Text = ((Convert.ToInt16(lbl_timer.Text) - 1)).ToString();
-            TimeSpan t1 = TimeSpan.Parse("00:00:00");
-           TimeSpan t2 = TimeSpan.Parse(DateTime.Now.ToString("HH:mm:ss"));
-        //TimeSpan t2 = TimeSpan.Parse(DateTime.Now.ToString("00:45:00")); // test
-         //   string minu =Convert.ToString( Convert.ToInt16(strtbl) * 2);
-            TimeSpan t = t2 - t1;
-         
+        //   TimeSpan t1 = TimeSpan.Parse("00:00:00");
+        //   TimeSpan t2 = TimeSpan.Parse(DateTime.Now.ToString("HH:mm:ss"));
+        //   TimeSpan t2 = TimeSpan.Parse(DateTime.Now.ToString("00:45:00")); // test
+        //   string minu =Convert.ToString( Convert.ToInt16(strtbl) * 2);
+        //   TimeSpan t = t2 - t1;
+            TimeSpan t = TimeSpan.Parse(DateTime.Now.ToString("HH:mm:ss"));
             if (Convert.ToInt16(lbl_timer.Text) == 0)
             {
                 if (t < TimeSpan.Parse(strtbl))
